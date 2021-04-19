@@ -1,0 +1,23 @@
+<div class="col-sm-6">
+<form #userForm="ngForm" (ngSubmit)="onSubmit(userForm.value)">
+<div class="form-group">
+<label for="exampleInputEmail1">Email address</label>
+
+<input type="email" class="form-
+control" name="useremail" ngModel #email="ngModel" required>
+
+<span *ngIf="email.invalid && email.touched" class="error">Email Can't be empty</span>
+</div>
+<div class="form-group">
+<label>Password</label>
+
+<input type="password" class="form-
+control" name="password" ngModel #password="ngModel" required>
+
+<span *ngIf="password.invalid && password.touched" class="error">Password Can't be empty
+
+</span>
+</div>
+<button type="submit" class="btn btn-primary">Submit</button>
+</form>
+</div>
